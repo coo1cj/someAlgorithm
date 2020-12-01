@@ -30,7 +30,7 @@ public:
 	}
 
 	void Union(int a, int b) {
-		if(r[root(a)] == r[root(b)]) return;   //此时根结点相同，啥也不做，因为在同一棵树下
+		if(root(a) == root(b)) return;   //此时根结点相同，啥也不做，因为在同一棵树下
 		else if (r[root(a)] < r[root(b)]) {
 			p[root(a)] = p[root(b)];
 			r[root(b)] += r[root(a)];
