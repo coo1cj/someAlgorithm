@@ -1,6 +1,6 @@
-```
-#pragma once
 
+#pragma once
+#include <stddef.h>
 using namespace std;
 
 class UF_quickFind {
@@ -29,4 +29,4 @@ public:
 		}
 	}
 };
-```
+
