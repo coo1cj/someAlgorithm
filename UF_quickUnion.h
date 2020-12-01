@@ -20,8 +20,11 @@ public:
 	}
 
 	int root(int n) {
-		while (p[n] != n)
+		while (p[n] != n){
+			p[n] = p[p[n]];
 			n = p[n];
+		}
+			
 		return n;
 	}
 
