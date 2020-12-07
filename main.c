@@ -46,6 +46,15 @@ void deleteNode(Liste *l){
     free(p);
 }
 
+Liste reverse2(Liste first){
+	if(!first) return NULL;
+	if(!first->next) return first;
+	Node* second = first->next;
+	Node* rest = reverse2(second);
+	second->next = first;
+	first->next = NULL;
+	return rest;
+}
 
 void Begyate(Liste *l){
     if(*l){
@@ -82,5 +91,7 @@ int main(){
     appendNode(&head, 9);
     print(&head);
     Begyate(&head);
+    print(&head);
+    head = reverse2(head);
     print(&head);
 }
