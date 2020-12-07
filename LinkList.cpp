@@ -164,12 +164,12 @@ void LinkList::reverse(){
 }
 
 Node* reverse2(Node* first){
-	if(!first) return NULL;
+	if(!first) return nullptr;
 	if(!first->next) return first;
 	Node* second = first->next;
 	Node* rest = reverse2(second);
 	second->next = first;
-	first->next = NULL;
+	first->next = nullptr;
 	return rest;
 }
 
