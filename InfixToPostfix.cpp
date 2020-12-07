@@ -32,8 +32,7 @@ std::string InfixToPostfix(const std::string& s){
 	return res;
 }
 
-int main(){
-	std::string s;
-	getline(std::cin, s);
+int main(int argc, char* argv[]){
+	std::string s = argv[1];
 	std::cout << InfixToPostfix(s) << std::endl;
 }
